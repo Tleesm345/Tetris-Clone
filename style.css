@@ -1,0 +1,409 @@
+@font-face {
+
+    font-family: tetrisFont;
+
+    src: url(tetris_font.ttf);
+
+}
+
+ 
+
+* {
+
+    font-family: tetrisFont;
+
+    letter-spacing: .1rem;
+
+}
+
+ 
+
+body {
+
+    background-color: #211331;
+
+    color: white;
+
+}
+
+ 
+
+.game_logo {
+
+    height: 635px;
+
+    width: 155px;
+
+    margin-top: 15px;
+
+    margin-left: 55px;
+
+ 
+
+}
+
+ 
+
+#buttons_container {
+
+    width: 266px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+ 
+
+#extraRight {
+
+    width: 266px;
+
+}
+
+ 
+
+#music_button {
+
+    background-color: #211331;
+
+    height: 65px;
+
+    width: 65px;
+
+    border: none;
+
+}
+
+ 
+
+button:hover {
+
+    cursor: pointer;
+
+}
+
+ 
+
+#start-button {
+
+    background-color: #211331;
+
+    height: 65px;
+
+    width: 65px;
+
+    border: none;
+
+}
+
+ 
+
+#pause_button_image {
+
+    filter: invert(15%) sepia(96%) saturate(5522%) hue-rotate(331deg) brightness(90%) contrast(108%);
+
+    height: 50px;
+
+    width: 50px;
+
+}
+
+ 
+
+#music_button_icon {
+
+    filter: invert(15%) sepia(96%) saturate(5522%) hue-rotate(331deg) brightness(90%) contrast(108%);
+
+    height: 50px;
+
+    width: 50px;
+
+    /*border: solid #A50648;*/
+
+   
+
+}
+
+ 
+
+#above_game {
+
+    display: flex;
+
+    justify-content: center;
+
+    line-height: 1rem;
+
+}
+
+ 
+
+.scoreContainerCentered {
+
+    width: 420px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+ 
+
+.container {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+ 
+
+.grid {
+
+    width: 420px;
+
+    height: 840px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    background-color: #27213c;
+
+    border: solid #A50648;
+
+   
+
+}
+
+ 
+
+.up-next-grid {
+
+    margin-left: 50px;
+
+    width: 180px;
+
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: solid #A50648;
+
+    border-style: inset;
+
+    border-radius: 25px;
+
+    background: linear-gradient(#211331, #27213c);
+
+}
+
+ 
+
+.piece_hold {
+
+   
+
+    margin-right: 50px;
+
+    width: 180px;
+
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: solid #A50648;
+
+    border-style: inset;
+
+    border-radius: 25px;
+
+    background: linear-gradient(#211331, #27213c);
+
+}
+
+ 
+
+.grid div {
+
+    width: 40px;
+
+    height: 40px;
+
+}
+
+ 
+
+.grid .gameboard {
+
+    border: 1px solid #7d82b8;
+
+}
+
+ 
+
+.dark_blue_tile {
+
+    background-size: cover;
+
+    background-image: url("dark_blue_tile.png");
+
+}
+
+ 
+
+.red_tile {
+
+    background-size: cover;
+
+    background-image: url("red_tile.png");
+
+}
+
+ 
+
+.purple_tile {
+
+    background-size: cover;
+
+    background-image: url("purple_tile.png");
+
+}
+
+ 
+
+.yellow_tile {
+
+    background-size: cover;
+
+    background-image: url("yellow_tile.png");
+
+}
+
+ 
+
+.light_blue_tile {
+
+        background-size: cover;
+
+        background-image: url("light_blue_tile.png");
+
+}
+
+ 
+
+.orange_tile {
+
+        background-size: cover;
+
+        background-image: url("orange_tile.png");
+
+}
+
+ 
+
+.light_green_tile {
+
+    background-size: cover;
+
+    background-image: url("light_green_tile.png");
+
+}
+
+ 
+
+.l-piece {
+
+    height: 120px;
+
+    width: 80px;
+
+}
+
+ 
+
+.z-piece {
+
+    height: 120px;
+
+    width: 80px;
+
+}
+
+ 
+
+.t-piece {
+
+    height: 80px;
+
+    width: 120px;
+
+}
+
+ 
+
+.o-piece {
+
+    height: 80px;
+
+    width: 80px;
+
+}
+
+ 
+
+.i-piece {
+
+    height: 160px;
+
+    width: 40px;
+
+}
+
+ 
+
+.l-inverse-piece {
+
+    height: 120px;
+
+    width: 80px;
+
+}
+
+ 
+
+.z-inverse-piece {
+
+    height: 120px;
+
+    width: 80px;
+
+}
+
+ 
+
+#gameboardTopLeft {
+
+    border-top-left-radius: 12px;
+
+}
+
+ 
+
+#gameboardTopRight {
+
+    border-top-right-radius: 12px;
+
+}

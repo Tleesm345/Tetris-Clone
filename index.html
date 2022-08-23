@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html>
+
+ 
+
+<head>
+
+    <meta charset="UTF-8" />
+
+   
+
+    <link rel="stylesheet" href="style.css"></link>
+
+ 
+
+    <title>Tetris</title>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+   
+
+   
+
+    <div id="above_game">
+
+        <div id="buttons_container">
+
+            <button id="start-button">
+
+                <img id ="pause_button_image" src="pause_button.png" alt="Pause Icon Button">
+
+            </button>
+
+            <button id="music_button">
+
+                <img id ="music_button_icon" src="music_off_icon.png" alt="Music Icon Button">
+
+            </button>
+
+        </div>
+
+        <div class="scoreContainerCentered">
+
+            <div class="scoreFieldLeft">
+
+                <h1>Lines : <span id="linesCount">0</span></h1>
+
+                <h1>Score : <span id="score">0</span></h1>
+
+            </div>
+
+            <div class="scoreFieldRight">
+
+                <h1>Tetrises : <span id="tetrisesDisplay">0</span></h1>
+
+                <h1>Time : <span id="timePlayed">0</span></h1>
+
+            </div>
+
+        </div>
+
+        <div id="extraRight">
+
+           
+
+        </div>
+
+    </div>
+
+   
+
+ 
+
+    <div class="container">
+
+ 
+
+        <div id = "left_of_game">
+
+            <div class="piece_hold">
+
+                <img id="hold-piece-image" src="">
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="grid">
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="gameboard"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+            <div class="taken"></div>
+
+        </div>
+
+ 
+
+        <div id="right_of_game">
+
+            <div class="up-next-grid">
+
+                <img id="up-next-piece-image" src="">
+
+            </div>
+
+            <img class="game_logo" src="tetris logo.PNG">
+
+        </div>
+
+       
+
+       
+
+    </div>
+
+ 
+
+   
+
+   
+
+   
+
+    <audio id="theme_song" loop>
+
+        <source src="tetris-theme.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="hold_sound">
+
+        <source src="hold_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="drop_sound">
+
+        <source src="drop_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="soft_drop_sound">
+
+        <source src="soft_drop_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="rotate_sound">
+
+        <source src="rotate_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="move_sound">
+
+        <source src="move_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="single_sound">
+
+        <source src="single_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="double_sound">
+
+        <source src="double_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="triple_sound">
+
+        <source src="triple_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <audio id="tetris_sound">
+
+        <source src="tetris_noise.mp3"></source>
+
+        Cant display audio tag
+
+    </audio>
+
+    <script src="script.js" ></script>
+
+</body>
+
+ 
+
+</html>
